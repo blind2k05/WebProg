@@ -1,5 +1,3 @@
-@include('components.login-modal')
-
 
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -38,24 +36,28 @@
                         ☰
                     </div>
 
+                    <!-- ada perubahan route di side bar -->
                     <div class="sidebar" id="sidebar">
                         <img src="{{ asset('img/logo.png') }}" alt="TopUpin" class ="sidebar-logo"> </br>
                         <p class="sidebar-text">Fullfill your wishest in </br> our store</p> </br>
-                        <a href="{{ route('dashboard') }}">Home</a>
-                        <a href="{{ route('home') }}">Produk</a>
+                        <a href="{{ route('home') }}">Home</a>
+                        <a href="{{ route('games.index') }}">Games</a>
                         <a href="{{ route('transactions.create') }}">Transaksi</a>
                     </div>
 
                     <div class="overlay" id="overlay"></div>
                 @endauth
 
-                <a class="navbar-brand brand" href="{{ route('dashboard') }}">
+                <a class="navbar-brand brand" href="{{ route('home') }}">
                     <img src="{{ asset('img/logo.png') }}" 
                         alt="TopUpin" 
                         class ="brand-logo">
                         <span class="brand-text">Lets TopUp</span>
                     <!-- {{ config('app.name',  asset('img/logo.png')) }} -->
                 </a>
+
+                
+
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -68,7 +70,22 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item me-3">
+                            <form action="{{ route('games.index') }}" method="GET" class="d-flex me-3">
+                                <input
+                                    class="form-control form-control-sm me-2"
+                                    type="search"
+                                    name="q"
+                                    placeholder="Cari game..."
+                                    value="{{ request('q') }}"
+                                >
+                                <button class="btn btn-sm btn-warning" type="submit">
+                                    Search
+                                </button>
+                            </form>
+                        </li>
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -123,7 +140,7 @@
     </div>
     @include('components.login-modal')
 
-    <small class="footer text-center">Copyright and Copy @ {{ date('Y') }}</small>
+    @include('layouts.footer')
     
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

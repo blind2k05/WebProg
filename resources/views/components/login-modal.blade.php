@@ -1,7 +1,7 @@
 <!-- Modal Login -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content border-0 rounded-4 overflow-hidden">
+        <div class="modal-content border-0 rounded-4 overflow-hidden login-modal">
 
             <div class="row g-0">
 

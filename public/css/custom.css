@@ -189,6 +189,112 @@
     border-color: #f44336;
 }
 
+
+.game-card{
+    border-radius: 16px;
+    
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.game-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.35);
+}
+
+
+.card-img-top{
+    width: 30vh;
+   
+}
+
+.product-btn{
+    justify-content: center;
+}
+
+
+body {
+    background-color: #020018; /* lebih gelap dari #05022c */
+    color: #eaeaea;
+}
+
+/* CARD biar kontras */
+.card {
+    background-color: #0b0a2e;
+    border: none;
+    color: #fff;
+}
+main {
+    background: transparent;
+}
+
+
+/* login modal */
+/* LOGIN MODAL TEXT COLOR FIX */
+.login-modal {
+    color: #000;
+}
+
+/* label (Email, Password, Remember Me) */
+.login-modal label,
+.login-modal .form-check-label {
+    color: #000;
+}
+
+/* input text */
+.login-modal .form-control {
+    color: #000;
+    background-color: #fff;
+}
+
+/* placeholder */
+.login-modal .form-control::placeholder {
+    color: #6c757d;
+}
+
+/* link lupa password */
+.login-modal a {
+    color: #0d6efd;
+}
+
+/* checkbox */
+.login-modal .form-check-input {
+    border-color: #000;
+}
+
+.nav-search {
+    width: 200px;
+    background-color: #0b0a2e;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 20px;
+    padding-left: 12px;
+}
+
+.nav-search::placeholder {
+    color: #aaa;
+}
+
+.nav-search:focus {
+    background-color: #0b0a2e;
+    color: #fff;
+    box-shadow: none;
+    border-color: #d2278d;
+}
+
+.footer-divider {
+    height: 0.5px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+}
+
+
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .auth-card {

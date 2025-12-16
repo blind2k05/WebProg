@@ -18,7 +18,7 @@ return new class extends Migration
         $table->foreignId('game_id')->constrained()->onDelete('cascade');
         $table->foreignId('product_id')->constrained()->onDelete('cascade');
         
-        $table->string('user_game_id');
+        $table->unsignedBigInteger('user_game_id');
         $table->string('server_id')->nullable();
         
         $table->enum('status', ['pending', 'completed', 'failed'])->default('pending');

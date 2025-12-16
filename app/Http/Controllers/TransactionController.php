@@ -26,6 +26,7 @@ class TransactionController extends Controller
         $product = Product::find($request->product_id);
         $transaction = Transaction::create([
             'user_id' => Auth::id(),
+            'game_id' => $product->game_id,
             'product_id' => $product->id,
             'amount' => $product->price,
             'payment_method' => $request->payment_method,

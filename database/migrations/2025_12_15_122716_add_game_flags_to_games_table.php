@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('transactions', function (Blueprint $table) {
+        Schema::table('games', function (Blueprint $table) {
             //
+            $table->enum('platform', ['mobile', 'pc'])->after('publisher');
+            $table->boolean('is_popular')->default(false)->after('platform');
         });
     }
 
@@ -21,7 +23,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('transactions', function (Blueprint $table) {
+        Schema::table('games', function (Blueprint $table) {
             //
         });
     }

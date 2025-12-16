@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Game extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'publisher', 'description', 'image'];
+    protected $fillable = [
+      'name', 'publisher', 'description', 'image', 'platform', 'is_popular'
+    ];
     public function products()
     {
       return $this->hasMany(Product::class);
