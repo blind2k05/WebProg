@@ -20,7 +20,7 @@ class TransactionController extends Controller
     {
         $request->validate([
             'product_id' => 'required|exists:products,id',
-            'payment_method' => 'required|in:transfer_bank,gopay,dana,kartu_kredit',
+            'payment_method' => 'required|in:bank,gopay,dana,ovo,qris',
             'user_game_id' => 'required|string|max:50',
         ]);
 

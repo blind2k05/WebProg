@@ -251,8 +251,61 @@ main {
     background: transparent;
 }
 
-/* FIX WIDTH CARD DI POPULAR SWIPER */
 
+/* ===== SWIPER ARROW FIX TOTAL ===== */
+
+.popularSwiper {
+    position: relative;
+    overflow: visible !important; /* DEFAULT SWIPER */
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+
+.popularSwiper .swiper-slide {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.popularSwiper .swiper-button-next,
+.popularSwiper .swiper-button-prev {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(13, 110, 253, 0.25);
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    transition: all 0.25s ease;
+    z-index: 9999;
+}
+
+.popularSwiper .swiper-button-next::after,
+.popularSwiper .swiper-button-prev::after {
+    font-size: 18px;  
+    font-weight: bold;
+}
+
+.popularSwiper .swiper-button-next:hover,
+.popularSwiper .swiper-button-prev:hover {
+    background: rgba(209, 17, 152, 0.25);
+    color: #d11198;
+    box-shadow: 0 0 15px rgba(209, 17, 152, 0.6);
+    transform: scale(1.1);
+}
+
+
+.popularSwiper .swiper-button-prev {
+    left: 15px;
+}
+
+.popularSwiper .swiper-button-next {
+    right: 15px;
+}
 
 
 
@@ -278,6 +331,7 @@ main {
     border-radius: 20px;
     box-shadow: 0 20px 30px rgba(241, 239, 239, 0.35);
 }
+
 
 
 /* login modal */
@@ -358,9 +412,7 @@ main {
     transition: transform .2s ease;
 }
 
-.transaction-card:hover {
-    transform: translateY(-5px);
-}
+
 
 .trx-header {
     display: flex;
@@ -407,6 +459,63 @@ main {
     margin-top: 8px;
 }
 
+.transaction-card {
+    max-width: 520px;
+    background: #0f122b;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    color: white;
+}
+
+.transaction-card .form-control {
+    background: #1b1e4b;
+    border: 1px solid #2a2e6e;
+    color: white;
+}
+
+.transaction-card .form-control::placeholder {
+    color: #aaa;
+}
+
+/* PAYMENT GRID */
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+}
+
+.payment-item {
+    background: #1b1e4b;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.25s ease;
+    border: 2px solid transparent;
+}
+
+.payment-item img {
+    max-height: 32px;
+    object-fit: contain;
+}
+
+/* HOVER */
+.payment-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* ACTIVE */
+.payment-item.active {
+    border-color: #28a745;
+    background: #22267a;
+}
+
+
+
+
+
 .payment-icons {
     display: flex;
     gap: 12px;
@@ -432,7 +541,12 @@ main {
     justify-content: center;
 }
 
-.footer-titlea{
+
+.footer-links{
+    color: white;
+}
+
+.footer-title{
     position: relative;
 }
 
@@ -456,10 +570,10 @@ main {
     }
 }
 
-/* MOBILE */
 @media (max-width: 576px) {
     .card-popular .swiper-slide {
         width: 80%;
     }
 }
+
 

@@ -1,38 +1,50 @@
   @extends('layouts.app')
 
   @section('content')
-      <!-- <h1 class="text-center">Selamat Datang!</h1>
-      <div class="text-center">
-        <a href="{{ route('games.index') }}" class="btn btn-primary ">Lihat Game</a>
-      </div> -->
 
       <section class="mb-5">
-        <h4 class="section-title">🔥Game Popular</h4>
-        <div class="row g-4 card-popular">
-          @foreach ($popularGames as $game)
-            @include('components.game-card', ['game' => $game])
-          @endforeach
-        </div>
+          <h4 class="section-title">🔥 Game Popular</h4>
+
+          <div class="swiper popularSwiper">
+              <div class="swiper-wrapper">
+                  @foreach ($popularGames as $game)
+                      <div class="swiper-slide">
+                          @include('components.game-card', ['game' => $game])
+                      </div>
+                  @endforeach
+              </div>
+
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+
+
       </section>
+
       <div class="container home-card">
         <section class="mb-5">
           <h4 class="section-title">📱 Game Mobile</h4>
-          <div class ="row g-3">
+          <div class ="row g-4">
             @foreach ($mobileGames as $game)
-              @include('components.game-card', ['game' => $game])
+              <div class="col-6 col-md-3 col-lg-2">
+                @include('components.game-card', ['game' => $game])
+              </div>
             @endforeach
           </div>
         </section>
 
         <section class="mb-5">
           <h4 class="section-title">💻 Game PC</h4>
-          <div class ="row g-3">
+          <div class ="row g-4">
             @foreach ($pcGames as $game)
-              @include('components.game-card', ['game' => $game])
+              <div class="col-6 col-md-3 col-lg-2">
+                @include('components.game-card', ['game' => $game])
+              </div>
             @endforeach
           </div>
         </section>
       </div>
+
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
       @if(session('success'))
