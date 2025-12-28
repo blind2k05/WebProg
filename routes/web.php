@@ -4,6 +4,7 @@ use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 
 
@@ -24,6 +25,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/__seed-games', function () {
+    Artisan::call('db:seed', [
+        '--class' => 'GameSeeder',
+        '--force' => true,
+    ]);
+
+    return 'Seeder executed';
+});
 
 
 
