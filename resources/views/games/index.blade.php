@@ -31,4 +31,9 @@
             @endforeach
         </div>
     </div>
+    <div class="pagination-wrapper mt-5">
+        {{ $games->withQueryString()->links('pagination::bootstrap-5') }}
+    </div>
+
+
 @endsection

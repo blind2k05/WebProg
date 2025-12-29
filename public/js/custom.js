@@ -47,4 +47,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    if (document.querySelector('.heroSwiper')) {
+        new Swiper('.heroSwiper', {
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+
+
 });

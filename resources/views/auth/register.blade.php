@@ -30,7 +30,7 @@
 
                 <!-- NAME -->
                 <div class="mb-3">
-                    <label class="form-label">Name</label>
+                    <label class="form-label text-white">Name</label>
                     <input
                         type="text"
                         name="name"
@@ -45,7 +45,7 @@
 
                 <!-- EMAIL -->
                 <div class="mb-3">
-                    <label class="form-label">Email</label>
+                    <label class="form-label text-white">Email</label>
                     <input
                         type="email"
                         name="email"
@@ -60,7 +60,7 @@
 
                 <!-- PASSWORD -->
                 <div class="mb-3">
-                    <label class="form-label">Password</label>
+                    <label class="form-label text-white">Password</label>
                     <input
                         type="password"
                         name="password"
@@ -74,7 +74,7 @@
 
                 <!-- CONFIRM -->
                 <div class="mb-4">
-                    <label class="form-label">Confirm Password</label>
+                    <label class="form-label text-white">Confirm Password</label>
                     <input
                         type="password"
                         name="password_confirmation"
@@ -98,5 +98,5 @@
 
     </div>
 </div>
-
+@include('layouts.footer') 
 @endsection

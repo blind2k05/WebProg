@@ -136,6 +136,104 @@ class GameSeeder extends Seeder
                     ['name' => 'Oneiric Shard 980', 'price' => 159000],
                 ]
             ],
+            [
+                'name' => 'Clash of Clans',
+                'publisher' => 'Supercell',
+                'description' => 'Game strategi membangun desa dan perang klan.',
+                'image' => 'img/game/coc.jpg',
+                'platform' => 'mobile',
+                'is_popular' => true,
+                'products' => [
+                    ['name' => 'Gold Pass', 'price' => 79000],
+                    ['name' => '500 Gems', 'price' => 75000],
+                    ['name' => '1200 Gems', 'price' => 149000],
+                ]
+            ],
+            [
+                'name' => 'Clash Royale',
+                'publisher' => 'Supercell',
+                'description' => 'Game strategi real-time dengan kartu.',
+                'image' => 'img/game/cr.jpg',
+                'platform' => 'mobile',
+                'is_popular' => false,
+                'products' => [
+                    ['name' => 'Pass Royale', 'price' => 79000],
+                    ['name' => '500 Gems', 'price' => 75000],
+                ]
+            ],
+            [
+                'name' => 'Minecraft',
+                'publisher' => 'Mojang',
+                'description' => 'Game sandbox kreatif dan survival.',
+                'image' => 'img/game/minecraft.jpg',
+                'platform' => 'multi-platform',
+                'is_popular' => true,
+                'products' => [
+                    ['name' => 'Minecraft Java Edition', 'price' => 399000],
+                    ['name' => 'Minecraft Bedrock Edition', 'price' => 349000],
+                ]
+            ],
+            [
+                'name' => 'Roblox',
+                'publisher' => 'Roblox Corporation',
+                'description' => 'Platform game online dengan konten buatan user.',
+                'image' => 'img/game/roblox.jpg',
+                'platform' => 'multi-platform',
+                'is_popular' => true,
+                'products' => [
+                    ['name' => '400 Robux', 'price' => 75000],
+                    ['name' => '800 Robux', 'price' => 149000],
+                    ['name' => '1700 Robux', 'price' => 299000],
+                ]
+            ],
+            [
+                'name' => 'Hearthstone',
+                'publisher' => 'Blizzard Entertainment',
+                'description' => 'Game kartu strategi online.',
+                'image' => 'img/game/hs.jpg',
+                'platform' => 'pc',
+                'is_popular' => false,
+                'products' => [
+                    ['name' => 'Card Pack x15', 'price' => 299000],
+                    ['name' => 'Mega Bundle', 'price' => 799000],
+                ]
+            ],
+            [
+                'name' => 'Brawl Stars',
+                'publisher' => 'Supercell',
+                'description' => 'Game aksi 3v3 cepat dan kompetitif.',
+                'image' => 'img/game/brawl.jpg',
+                'platform' => 'mobile',
+                'is_popular' => true,
+                'products' => [
+                    ['name' => '170 Gems', 'price' => 79000],
+                    ['name' => '360 Gems', 'price' => 149000],
+                ]
+            ],
+            [
+                'name' => 'Stumble Guys',
+                'publisher' => 'Kitka Games',
+                'description' => 'Game party battle royale yang seru.',
+                'image' => 'img/game/stumbleguys.jpg',
+                'platform' => 'mobile',
+                'is_popular' => false,
+                'products' => [
+                    ['name' => '250 Gems', 'price' => 50000],
+                    ['name' => '800 Gems', 'price' => 150000],
+                ]
+            ],
+            [
+                'name' => 'Among Us',
+                'publisher' => 'Innersloth',
+                'description' => 'Game deduksi sosial multiplayer.',
+                'image' => 'img/game/among.png',
+                'platform' => 'multi-platform',
+                'is_popular' => false,
+                'products' => [
+                    ['name' => 'Cosmicube', 'price' => 79000],
+                    ['name' => 'Stars Pack', 'price' => 129000],
+                ]
+            ],
         ];
 
         foreach ($games as $gameData) {

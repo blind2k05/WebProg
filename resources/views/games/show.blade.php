@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="game-header py-5">
+    <div class="game-header py-1">
         <div class ="container">
-            <div class="game-header=card d-flex align-item-center gap-4 p-4">
+            <div class="game-header-card d-flex align-item-center gap-4 p-4">
                 <img 
                     src="{{ asset($game->image) }}" 
                     alt="{{ $game->name}}"
@@ -17,7 +17,7 @@
                     </div>
 
                     <h2 class="fw--bold mb-2">{{ $game->name }}</h2>
-                    <p class="text-muted mb-0">
+                    <p class="text-muted mb-0 text-desc-prod">
                         Top up {{ $game->name}} dengan proses cepat, aman, dan terpercaya
                         {{ $game->description }}
                     </p>

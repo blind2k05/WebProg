@@ -25,8 +25,8 @@ class HomeController extends Controller
     {
         $popularGames = Game::where('is_popular', true)->limit(6)->get();
 
-        $mobileGames = Game::where('platform', ['mobile', 'multi-platform'])->limit(6)->get();
-        $pcGames     = Game::where('platform', ['pc', 'multi-platform'])->limit(6)->get();
+        $mobileGames = Game::where('platform', ['mobile', 'multi-platform'])->limit(8)->get();
+        $pcGames     = Game::where('platform', ['pc', 'multi-platform'])->limit(8)->get();
 
         
 
